@@ -75,8 +75,8 @@ def kill(process, code):
         process.kill()
         process.returncode = code
 
-with zipfile.ZipFile('python.zip', 'r') as zip_ref:
-    zip_ref.extractall()
+# with zipfile.ZipFile('python.zip', 'r') as zip_ref:
+#     zip_ref.extractall()
 
 def timeout_manager(proc, seconds=None):
     try:
@@ -582,3 +582,4 @@ while True:
     except subprocess.TimeoutExpired:
         os.killpg(os.getpgid(process.pid), signal.SIGTERM)
     sleep(1)
+
